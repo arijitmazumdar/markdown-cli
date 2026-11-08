@@ -1,0 +1,21 @@
+{
+  "name": "markdown-cli",
+  "version": "0.1.0",
+  "description": "Display Markdown files in a readable terminal format",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "bin": {
+    "markdown-cli": "dist/cli.js"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.test.json && node --import tsx --test \"tests/**/*.test.ts\"",
+    "dev": "tsx src/cli.ts",
+    "prepack": "npm run build"
+  }
+}
