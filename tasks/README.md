@@ -2,7 +2,7 @@
 
 ## Goal
 
-Implement the TypeScript terminal Markdown CLI described in the root AGENTS.md. These files plan work only; implementation has not begun.
+Implement the TypeScript terminal Markdown CLI described in the root AGENTS.md. Tasks 01 (tooling) and 02 (argument parsing and help) are complete; remaining CLI behavior is planned in the following tasks.
 
 ## Task Index
 

@@ -21,7 +21,9 @@ Draft independently from the agreed contracts. Final command verification requir
 
 ## Acceptance Criteria
 
-- [ ] Every documented command matches package.json and succeeds where applicable in a clean local setup.
-- [ ] Examples cover all required CLI inputs and help.
-- [ ] Documentation does not claim registry publication or unsupported features.
-- [ ] AGENTS.md reflects the implemented structure, framework, and executable name.
+- [x] Every documented command matches package.json and succeeds where applicable in a clean local setup.
+- [x] Examples cover all required CLI inputs and help.
+- [x] Documentation does not claim registry publication or unsupported features.
+- [x] AGENTS.md reflects the implemented structure, framework, and executable name.
+
+Validation: `npm ci --offline --cache /tmp/markdown-cli-npm-cache`, `npm run build`, `npm test` (24 passing), the documented `npm run dev --` command, and all usage examples succeeded. Reviewed README.md and AGENTS.md against the current CLI behavior; `git diff --check` passed.

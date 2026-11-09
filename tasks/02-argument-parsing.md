@@ -21,7 +21,13 @@ Use the parsing contract in README.md. Tests need task 01 tooling to run, but im
 
 ## Acceptance Criteria
 
-- [ ] Tests cover one file, multiple files, a single argument containing spaces, and filenames beginning with a dash after --.
-- [ ] --help returns help intent without requiring filenames or filesystem access.
-- [ ] Unknown options and no arguments produce clear usage errors.
-- [ ] Help examples use markdown-cli and explain accepted arguments.
+- [x] Tests cover one file, multiple files, a single argument containing spaces, and filenames beginning with a dash after --.
+- [x] --help returns help intent without requiring filenames or filesystem access.
+- [x] Unknown options and no arguments produce clear usage errors.
+- [x] Help examples use markdown-cli and explain accepted arguments.
+
+## Verification and Review
+
+- `npm test`: 12 tests passed, including 11 argument/help tests and the tooling smoke test.
+- `npm run build`: strict TypeScript compilation passed.
+- Code review checked the shared contract, help precedence before the first `--`, literal arguments after it, input preservation, usage diagnostics, and absence of filesystem access. Clarified standalone help usage; no remaining findings.

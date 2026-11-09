@@ -21,7 +21,9 @@ Use loadMarkdown(path) from README.md. Work independently with temporary files; 
 
 ## Acceptance Criteria
 
-- [ ] Valid Markdown files return their exact text, including Unicode and empty content.
-- [ ] Non-Markdown inputs fail clearly; paths such as notes.md.txt are rejected.
-- [ ] Missing files, directories, and unreadable files produce errors identifying the path.
-- [ ] Tests do not depend on host permissions or files outside temporary fixtures.
+- [x] Valid Markdown files return their exact text, including Unicode and empty content.
+- [x] Non-Markdown inputs fail clearly; paths such as notes.md.txt are rejected.
+- [x] Missing files, directories, and unreadable files produce errors identifying the path.
+- [x] Tests do not depend on host permissions or files outside temporary fixtures.
+
+Validation: `npm test` and `npm run build` pass. Reviewed the loader and tests against the acceptance criteria; no outstanding findings.

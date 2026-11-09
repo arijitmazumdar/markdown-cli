@@ -22,7 +22,9 @@ Tasks 01–04 must be complete for final validation. Develop orchestration with 
 
 ## Acceptance Criteria
 
-- [ ] CLI tests cover multiple files, a quoted path, invalid extension, missing/unreadable files, no arguments, unknown options, and --help.
-- [ ] Tests assert stdout, stderr, argument order, and exit status; help does not read files.
-- [ ] Piped output is readable and free of ANSI styling.
-- [ ] npm run build, npm test, npm run dev -- tests/fixtures/example.md, and the locally installed markdown-cli command work. Include the example fixture in this task.
+- [x] CLI tests cover multiple files, a quoted path, invalid extension, missing/unreadable files, no arguments, unknown options, and --help.
+- [x] Tests assert stdout, stderr, argument order, and exit status; help does not read files.
+- [x] Piped output is readable and free of ANSI styling.
+- [x] npm run build, npm test, npm run dev -- tests/fixtures/example.md, and the locally installed markdown-cli command work. Include the example fixture in this task.
+
+Validation: all 24 tests pass from a clean `dist/`; the dev command and a temporary local package installation render the example fixture. Review found and fixed the missing build prerequisite in `npm test`.

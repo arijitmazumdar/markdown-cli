@@ -4,7 +4,7 @@
   "description": "Display Markdown files in a readable terminal format",
   "type": "module",
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=22.0.0"
   },
   "bin": {
     "markdown-cli": "dist/cli.js"
@@ -14,8 +14,16 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "tsc -p tsconfig.test.json && node --import tsx --test \"tests/**/*.test.ts\"",
+    "test": "npm run build && tsc -p tsconfig.test.json && node --import tsx --test \"tests/**/*.test.ts\"",
     "dev": "tsx src/cli.ts",
     "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "marked": "^15.0.12"
   }
 }
